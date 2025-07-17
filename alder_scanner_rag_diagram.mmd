@@ -1,0 +1,12 @@
+graph TD
+    A[Source Code/Repository] --> B[Code Processor]
+    B --> C[Embedding Generator - PyTorch Embeddings]
+    C --> D[Vector Database]
+    E[User Query/Prompt] --> F[LLM Client]
+    F --> G[Retriever]
+    G --> D
+    D --> H[Relevant Chunks]
+    H --> I[LLM Client Augmented]
+    I --> J[Security Analyzer]
+    J --> K[Report Generator]
+    K --> L[Security Report]
